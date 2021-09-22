@@ -1,0 +1,52 @@
+﻿@model IEnumerable<GitHub.Models.Gig>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<ul>
+
+
+    @foreach (var gig in Model)
+
+    {
+        <li>
+            <div class="date">
+                <div class="month">
+                    @gig.DateTime.ToString("MM");
+
+                </div>
+                <div class="day">
+                    @gig.DateTime.ToString("d ")
+                </div>
+            </div>
+            <div class="details">
+                <span class="artist">
+                    @gig.Artist.Name
+                </span>
+                <span class="genre">
+                    @gig.Genre.Name
+                </span>
+                <button class="btn btn-default"> Goin ?</button>
+
+            </div>
+
+
+        </li>
+
+    }
+
+    kloq
+    <h1>klo </h1>
+
+</ul>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+}
+
